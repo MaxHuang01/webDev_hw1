@@ -1,0 +1,41 @@
+
+
+<form>
+    <div class = "form-group">
+        <div class = "col">
+            <label for="origin">Origination</label>
+            <select class="form-control" name="origination" id = "origin">
+                <option >ORD</option>
+                <option >LAX</option>
+                <option >TPE</option>
+                <option >SEA</option>
+                <option >FRA</option>
+      </select>
+        </div>
+
+        <div class = "col">
+            <label for="des">Destination</label>
+            <select class="form-control" name="destination" id = "des">
+                <option >BOS</option>
+                <option >OKC</option>
+                <option >TYO</option>
+                <option >FUK</option>
+                <option >YYZ</option>
+            </select>
+        </div>
+        <br>
+       <lable for = "traveldate" >Enter travel date</lable>
+       <input type = "date" id = "traveldate"><br><br>
+
+        <div class="col">
+            <label for = "numOfTra">Enter number of travelers</label>
+            <input class="form-control"  id="numOfTra" type="number" [(ngModel)]="travelNum" name="travelNum">
+        </div>
+
+       
+           
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="cal()">Submit</button>
+</form>
+
+Total: {{total}}
