@@ -1,5 +1,36 @@
-<h2>Welcome {{title}}<h2>
-  <p>OS: Windows
-    <p>IDE: VSCode
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+  <ul class="navbar-nav">
 
-<app-travle-request></app-travle-request>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="hrefDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Menu(HRef)
+      </a>
+      <div class="dropdown-menu" aria-labelledby="hrefDropdown">
+        <a class="dropdown-item" href="about">About</a>
+        <a class="dropdown-item" href="flightPrice">FlightPrice</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="routerLinkDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Menu(Router)
+      </a>
+      <div class="dropdown-menu" aria-labelledby="routerLinkDropdown">
+        <a class="dropdown-item" [routerLink]="['/about']">About</a>
+        <a class="dropdown-item" [routerLink]="['/flightPrice']">FlightPrice</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/about']">About</a>
+    </li>
+
+  </ul>
+</nav>
+<br/>
+<br/>
+<br/>
+<router-outlet></router-outlet>
+
+
+
